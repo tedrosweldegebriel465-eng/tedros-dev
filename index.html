@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tedros' portfolio - front-end developer building modern web experiences">
+    <meta name="author" content="Tedros">
+    <title>Tedros | Full-Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#home">Skip to content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">TedrosDev</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-btn" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">Welcome to my portfolio</span>
+                    <h1>Hi, I'm <span class="highlight">Tedros</span></h1>
+                    <h2>Aspiring Full-Stack Developer</h2>
+                    <p>I build modern, responsive, and high-performance websites that deliver exceptional user experiences. Currently pursuing Computer Science and passionate about creating beautiful web applications.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/tedrosweldegebriel465-eng" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/tedros-dev369/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/@TedrosDev" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:tedrosweldegebriel465@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I’m a <strong>Computer Science student @ Aksum University</strong> (4th year), focused on building practical software systems
+                        and strengthening my skills in <strong>full-stack web development</strong> and <strong>core software engineering fundamentals</strong>.
+                    </p>
+
+                    <p>
+                        My main interest is understanding how systems work end-to-end — from frontend interfaces to backend logic and data handling.
+                        I enjoy turning ideas into working applications that solve real problems and help me improve as a developer.
+                    </p>
+
+                    <div class="fun-facts">
+
+                        <div class="fact">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Full-stack mindset</span>
+                        </div>
+
+                        <div class="fact">
+                            <i class="fas fa-diagram-project"></i>
+                            <span>Projects that solve real problems</span>
+                        </div>
+
+                        <div class="fact">
+                            <i class="fas fa-database"></i>
+                            <span>Strong CS fundamentals</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="about-visual">
+
+                    <div class="focus-card">
+
+                        <div class="focus-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+
+                        <h3>What I Focus On</h3>
+
+                        <div class="focus-grid" aria-label="Focus areas">
+
+                            <div class="focus-item">
+                                <i class="fas fa-code"></i>
+                                <span>Full-Stack Web (Frontend + Backend)</span>
+                            </div>
+
+                            <div class="focus-item">
+                                <i class="fas fa-database"></i>
+                                <span>Data workflows & database fundamentals</span>
+                            </div>
+
+                            <div class="focus-item">
+                                <i class="fas fa-compass-drafting"></i>
+                                <span>Software design & system development</span>
+                            </div>
+
+                            <div class="focus-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Data Structures & Algorithmic Problem Solving</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="callout">
+
+                        <div class="callout-top">
+                            <i class="fas fa-road"></i>
+                            <h3>Current Direction</h3>
+                        </div>
+
+                        <p>
+                            I’m strengthening my full-stack development skills while exploring backend systems and data-focused applications.
+                            My goal is to build scalable software systems and gain real-world engineering experience.
+                        </p>
+
+                        <div class="callout-bottom">
+                            <span class="chip"><i class="fas fa-flag"></i> Goal</span>
+                            <span>Grow into a software engineer strong in both application and data systems.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Experience Section -->
+<section id="experience" class="experience">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Experience</h2>
+            <div class="underline"></div>
+            <p>What I’ve been building and learning</p>
+        </div>
+
+        <div class="timeline">
+
+            <!-- Frontend / Projects -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <h3>Frontend Developer (Academic & Personal Projects)</h3>
+                        <span class="timeline-meta">2024 — Present</span>
+                    </div>
+
+                    <p>
+                        Building responsive websites and web applications through academic and personal projects,
+                        focusing on clean UI design, usability, and performance.
+                    </p>
+
+                    <ul class="timeline-tags">
+                        <li>Responsive UI</li>
+                        <li>Performance</li>
+                        <li>Reusable Components</li>
+                        <li>Accessibility</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CS Student -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <h3>Computer Science Student</h3>
+                        <span class="timeline-meta">Ongoing</span>
+                    </div>
+
+                    <p>
+                        Strengthening core computer science fundamentals and applying them in practical projects
+                        and coursework.
+                    </p>
+
+                    <ul class="timeline-tags">
+                        <li>Data Structures & Algorithms (DSA)</li>
+                        <li>Web Development</li>
+                        <li>Problem Solving</li>
+                        <li>Databases & Networking</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Achievements Section -->
+<section id="achievements" class="achievements">
+    <div class="container">
+        <div class="achievements-stats">
+
+            <div class="stat">
+                <div class="stat-number" data-target="3">3</div>
+                <p>Full-Stack Web Projects (University & Personal)</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number" data-target="1">1</div>
+                <p>Strong Foundation in Algorithms & Problem Solving Practice</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number" data-target="5">5</div>
+                <p>Programming & Database Experience (PHP, JavaScript, MySQL)</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number" data-target="3">3</div>
+                <p>Certifications in AI, Data Analysis & Cybersecurity</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number" data-target="10">10</div>
+                <p>Academic & Personal Projects Built and Continuously Improved</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- What I'm Focused On Section -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>What I’m Focused On</h2>
+            <div class="underline"></div>
+            <p>Areas I’m currently learning and building through projects</p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Full-Stack Development</h3>
+                <p>Building web applications using PHP, JavaScript, HTML, CSS, and MySQL while understanding how frontend and backend systems work together.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Backend & Databases</h3>
+                <p>Working with MySQL and backend logic to understand data storage, management, and integration in real applications.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Problem Solving</h3>
+                <p>Practicing data structures and algorithms to improve logical thinking and prepare for technical interviews.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Software Engineering Fundamentals</h3>
+                <p>Learning clean code practices, object-oriented programming, and system design through academic and personal projects.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Continuous Learning</h3>
+                <p>Expanding knowledge through projects and certifications in AI, data analysis, and cybersecurity.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Writing Section -->
+<section id="writing" class="blog">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Writing</h2>
+            <div class="underline"></div>
+            <p>Short notes about what I learn and build</p>
+        </div>
+
+        <div class="blog-grid" id="writingGrid" aria-live="polite">
+            <!-- Filled by script.js -->
+        </div>
+
+    </div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Projects</h2>
+            <div class="underline"></div>
+            <p>Selected work and applications I’ve built or contributed to</p>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="projects-toolbar" role="region" aria-label="Project filters">
+
+            <div class="project-filters" id="projectFilters" role="tablist" aria-label="Filter projects">
+                <!-- Filled by script.js -->
+            </div>
+
+            <div class="project-search">
+                <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                <input
+                    id="projectSearch"
+                    type="search"
+                    placeholder="Search projects..."
+                    autocomplete="off"
+                    aria-label="Search projects"
+                >
+            </div>
+
+        </div>
+
+        <!-- Grid -->
+        <div class="projects-grid" id="projectsGrid" aria-live="polite">
+            <!-- Filled by script.js -->
+        </div>
+
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <div class="underline"></div>
+            <p>Technologies and tools I work with</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- Frontend -->
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Frontend</h3>
+
+                <div class="skill-items">
+
+                    <div class="skill-item">
+                        <span>HTML5</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>CSS3</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>React</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+
+                <div class="skill-items">
+
+                    <div class="skill-item">
+                        <span>Git & GitHub</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>VS Code</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>Figma</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="65"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>Responsive Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <div class="underline"></div>
+            <p>Let’s connect and build something meaningful</p>
+        </div>
+
+        <div class="contact-content">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>tedrosweldegebriel465@gmail.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+251949802587</p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Aksum, Ethiopia</p>
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" method="POST" data-netlify="true">
+
+                <input type="hidden" name="form-name" value="contact">
+
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-content">
+
+            <p>
+                © 2026 Tedros. All rights reserved. Built with focus and dedication to software development.
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Project Modal -->
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project details">
+
+    <div class="modal-overlay" data-modal-close></div>
+
+    <div class="modal-content" role="document">
+
+        <button class="modal-close" type="button" aria-label="Close" data-modal-close>
+            <i class="fas fa-xmark"></i>
+        </button>
+
+        <div class="modal-body" id="projectModalBody">
+            <!-- Filled by script.js -->
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

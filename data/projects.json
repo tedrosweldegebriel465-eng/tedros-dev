@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-05-08T08:20:03Z",
+  "projects": [
+    {
+      "id": "graduate-job-connect",
+      "title": "Aksum-University — Web-project",
+      "subtitle": "",
+      "description": "",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=700&fit=crop",
+      "gallery": [],
+      "tags": [
+        "PHP",
+        "MySQL",
+        "CSS",
+        "JavaScript"
+      ],
+      "category": "Web App",
+      "links": {
+        "github": "https://github.com/tedrosweldegebriel465-eng/Aksum-University---Web-project",
+        "live": ""
+      },
+      "highlights": [
+        "Role-based auth",
+        "Job posting & applications",
+        "Admin dashboard",
+        "CV upload"
+      ],
+      "meta": {
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-04-21T06:06:57Z",
+        "language": "PHP"
+      }
+    },
+    {
+      "id": "ethiopian-gps",
+      "title": "Design-and-Analysis-Algorithm-Project",
+      "subtitle": "Ethiopian-GPS-Navigation-System ",
+      "description": "Ethiopian-GPS-Navigation-System ",
+      "image": "data/image%20samples%20GPS/image.png",
+      "gallery": [
+        "data/image%20samples%20GPS/image%20copy.png",
+        "data/image%20samples%20GPS/image%20copy%202.png",
+        "data/image%20samples%20GPS/image%20copy%203.png"
+      ],
+      "tags": [
+        "Python",
+        "Flask",
+        "Dijkstra",
+        "Folium",
+        "Data Viz"
+      ],
+      "category": "Data / Algorithms",
+      "links": {
+        "github": "https://github.com/tedrosweldegebriel465-eng/Design-and-Analysis-Algorithm-Project",
+        "live": ""
+      },
+      "highlights": [
+        "Shortest path routing",
+        "Interactive dashboard",
+        "Network analytics",
+        "Visualizations"
+      ],
+      "meta": {
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-04-20T08:55:05Z",
+        "language": "HTML"
+      }
+    },
+    {
+      "id": "inventory-system",
+      "title": "Aksum-University — Web — project",
+      "subtitle": "",
+      "description": "",
+      "image": "data/image%20samples%20IMS/image.png",
+      "gallery": [
+        "data/image%20samples%20IMS/image%20copy.png",
+        "data/image%20samples%20IMS/image%20copy%202.png",
+        "data/image%20samples%20IMS/image%20copy%203.png"
+      ],
+      "tags": [
+        "PHP",
+        "CSS",
+        "JavaScript"
+      ],
+      "category": "Web App",
+      "links": {
+        "github": "https://github.com/tedrosweldegebriel465-eng/Aksum-University---Web---project",
+        "live": ""
+      },
+      "highlights": [
+        "Inventory workflows",
+        "Management UI",
+        "Responsive layout"
+      ],
+      "meta": {
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-02-04T11:54:25Z",
+        "language": "PHP"
+      }
+    },
+    {
+      "id": "ai-tutor",
+      "title": "AI Learning Tutor (In Progress)",
+      "subtitle": "AI-based education assistant for students",
+      "description": "An AI-based app to help students learn faster with explanations, practice, and personalized guidance. (Currently in development.)",
+      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=700&fit=crop",
+      "tags": [
+        "AI",
+        "Education",
+        "In Progress"
+      ],
+      "category": "In Progress",
+      "links": {},
+      "highlights": [
+        "Personalized learning support",
+        "Practice + feedback loops",
+        "Education-focused UX"
+      ],
+      "status": "In Progress"
+    },
+    {
+      "id": "ai-classroom",
+      "title": "AI Classroom Tools (In Progress)",
+      "subtitle": "AI utilities for teachers and learning content",
+      "description": "AI tools focused on helping teachers and improving learning content workflows. (Currently in development.)",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=700&fit=crop",
+      "tags": [
+        "AI",
+        "Education",
+        "In Progress"
+      ],
+      "category": "In Progress",
+      "links": {},
+      "highlights": [
+        "Teacher workflows",
+        "Content support",
+        "Better classroom experience"
+      ],
+      "status": "In Progress"
+    }
+  ]
+}

@@ -106,7 +106,7 @@ const fallbackProjects = [
         title: 'Inventory System Web App',
         subtitle: 'Inventory workflows + management screens',
         description: 'Inventory system web project built for university work. Includes core inventory workflows and management UI.',
-        image: 'data/image samples IMS/login.png',
+        image: 'data/image samples IMS/Home.png',
         tags: ['PHP', 'CSS', 'JavaScript'],
         category: 'Web App',
         links: {

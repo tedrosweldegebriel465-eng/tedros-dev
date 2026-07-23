@@ -84,7 +84,7 @@ const fallbackProjects = [
         tags: ['PHP', 'MySQL', 'CSS', 'JavaScript'],
         category: 'Web App',
         links: {
-            github: 'https://github.com/tedrosweldegebriel465-eng/Aksum-University---Web-project'
+            github: 'https://github.com/tedrosweldegebriel465-eng/Web---programming-project'
         },
         highlights: ['Role-based authentication', 'Job posting & applications', 'Admin dashboard', 'CV upload']
     },
@@ -97,20 +97,20 @@ const fallbackProjects = [
         tags: ['Python', 'Flask', 'Dijkstra', 'Folium', 'Data Viz'],
         category: 'Data / Algorithms',
         links: {
-            github: 'https://github.com/tedrosweldegebriel465-eng/Design-and-Analysis-Algorithm-Project'
+            github: 'https://github.com/tedrosweldegebriel465-eng/ethiopian-gps-navigation-system'
         },
         highlights: ['Shortest path routing (Dijkstra)', 'Network analytics (centrality)', 'Interactive map dashboard', 'Reports & visualizations']
     },
     {
         id: 'inventory-system',
-        title: 'Inventory System (Web Project)',
+        title: 'Inventory System Web App',
         subtitle: 'Inventory workflows + management screens',
         description: 'Inventory system web project built for university work. Includes core inventory workflows and management UI.',
-        image: 'data/image samples IMS/image copy.png',
+        image: 'data/image samples IMS/Home.png',
         tags: ['PHP', 'CSS', 'JavaScript'],
         category: 'Web App',
         links: {
-            github: 'https://github.com/tedrosweldegebriel465-eng/Aksum-University---Web---project'
+            github: 'https://github.com/tedrosweldegebriel465-eng/ims-inventory-management-system'
         },
         highlights: ['Inventory workflows', 'Simple admin-style UI', 'Responsive layout']
     },

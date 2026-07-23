@@ -3,7 +3,7 @@
   "projects": [
     {
       "id": "graduate-job-connect",
-      "title": "Aksum-University — Web-project",
+      "title": "Graduate Job Connect",
       "subtitle": "",
       "description": "",
       "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=700&fit=crop",
@@ -16,7 +16,7 @@
       ],
       "category": "Web App",
       "links": {
-        "github": "https://github.com/tedrosweldegebriel465-eng/Aksum-University---Web-project",
+        "github": "https://github.com/tedrosweldegebriel465-eng/Web---programming-project",
         "live": ""
       },
       "highlights": [
@@ -34,7 +34,7 @@
     },
     {
       "id": "ethiopian-gps",
-      "title": "Design-and-Analysis-Algorithm-Project",
+      "title": "ethiopian-gps-navigation-system (Graph-Based Route Optimization)",
       "subtitle": "Ethiopian-GPS-Navigation-System ",
       "description": "Ethiopian-GPS-Navigation-System ",
       "image": "data/image%20samples%20GPS/image.png",
@@ -52,7 +52,7 @@
       ],
       "category": "Data / Algorithms",
       "links": {
-        "github": "https://github.com/tedrosweldegebriel465-eng/Design-and-Analysis-Algorithm-Project",
+        "github": "https://github.com/tedrosweldegebriel465-eng/ethiopian-gps-navigation-system",
         "live": ""
       },
       "highlights": [
@@ -70,7 +70,7 @@
     },
     {
       "id": "inventory-system",
-      "title": "Aksum-University — Web — project",
+      "title": "IMS - Inventory Management System",
       "subtitle": "",
       "description": "",
       "image": "data/image%20samples%20IMS/image.png",
@@ -86,7 +86,7 @@
       ],
       "category": "Web App",
       "links": {
-        "github": "https://github.com/tedrosweldegebriel465-eng/Aksum-University---Web---project",
+        "github": "https://github.com/tedrosweldegebriel465-eng/ims-inventory-management-system",
         "live": ""
       },
       "highlights": [

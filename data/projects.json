@@ -1,143 +1,138 @@
 {
-  "generated_at": "2026-05-08T08:20:03Z",
+  "generated_at": "2026-10-01T00:00:00Z",
   "projects": [
     {
       "id": "graduate-job-connect",
       "title": "Graduate Job Connect",
-      "subtitle": "",
-      "description": "",
-      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=700&fit=crop",
-      "gallery": [],
-      "tags": [
-        "PHP",
-        "MySQL",
-        "CSS",
-        "JavaScript"
+      "subtitle": "Graduate employment and recruitment platform for Ethiopia",
+      "description": "A full-stack recruitment platform connecting graduates with employers and job opportunities across Ethiopia. Features role-based accounts for graduates, employers, and admins, with job discovery, applications, and email OTP verification.",
+      "image": "data/Graduate Job Connect/image.png",
+      "gallery": [
+        "data/Graduate Job Connect/image copy.png",
+        "data/Graduate Job Connect/image copy 2.png",
+        "data/Graduate Job Connect/image copy 3.png"
       ],
+      "tags": ["Node.js", "Express.js", "MongoDB", "JWT", "bcrypt", "HTML5", "CSS3", "JavaScript"],
       "category": "Web App",
       "links": {
-        "github": "https://github.com/tedrosweldegebriel465-eng/Web---programming-project",
-        "live": ""
+        "github": "https://github.com/tedrosweldegebriel465-eng/Graduate-Job-Connect-GJC-"
       },
       "highlights": [
-        "Role-based auth",
-        "Job posting & applications",
-        "Admin dashboard",
-        "CV upload"
-      ],
-      "meta": {
-        "stars": 0,
-        "forks": 0,
-        "updated_at": "2026-04-21T06:06:57Z",
-        "language": "PHP"
-      }
+        "Graduate and employer accounts",
+        "Authentication and role-based access",
+        "Job discovery and search",
+        "Job applications",
+        "Email OTP verification",
+        "Administrative functionality"
+      ]
+    },
+    {
+      "id": "currency-arbitrage",
+      "title": "Currency Arbitrage Detector",
+      "subtitle": "Graph-based financial algorithm for detecting arbitrage opportunities",
+      "description": "A Python research project that models currency exchange markets as weighted directed graphs and detects potential arbitrage opportunities using the Bellman-Ford algorithm. Includes synthetic data generation and exchange rate analysis.",
+      "image": "data/currency arbitrage/image.png",
+      "gallery": [],
+      "tags": ["Python", "Bellman-Ford", "Graph Theory", "Data Visualization", "Algorithms"],
+      "category": "Algorithms",
+      "links": {
+        "github": "https://github.com/tedrosweldegebriel465-eng/currency-arbitrage"
+      },
+      "highlights": [
+        "Currency exchange rate analysis",
+        "Weighted directed graph modeling",
+        "Negative cycle detection (Bellman-Ford)",
+        "Arbitrage opportunity identification",
+        "Synthetic data generation"
+      ]
+    },
+    {
+      "id": "connecthub",
+      "title": "ConnectHub",
+      "subtitle": "Social networking application with real-time interaction",
+      "description": "A social networking application built with Node.js and Express. Features user registration, authentication with JWT, social interaction, and real-time communication capabilities via Socket.IO.",
+      "image": "data/connecthub/image.png",
+      "gallery": [],
+      "tags": ["Node.js", "Express.js", "MongoDB", "Socket.IO", "JWT", "bcrypt"],
+      "category": "Web App",
+      "links": {
+        "github": "https://github.com/tedrosweldegebriel465-eng/ConnectHub"
+      },
+      "highlights": [
+        "User registration and authentication",
+        "JWT-based session management",
+        "Real-time communication (Socket.IO)",
+        "Social interaction features",
+        "RESTful API design"
+      ]
     },
     {
       "id": "ethiopian-gps",
-      "title": "ethiopian-gps-navigation-system (Graph-Based Route Optimization)",
-      "subtitle": "Ethiopian-GPS-Navigation-System ",
-      "description": "Ethiopian-GPS-Navigation-System ",
-      "image": "data/image%20samples%20GPS/image.png",
+      "title": "Ethiopian GPS Navigation System",
+      "subtitle": "Route analysis using graph algorithms and interactive maps",
+      "description": "A navigation and route analysis application that uses graph algorithms to find routes between Ethiopian cities. Built with Python and Flask, featuring interactive map visualizations powered by Folium and network analytics.",
+      "image": "data/image samples GPS/image.png",
       "gallery": [
-        "data/image%20samples%20GPS/image%20copy.png",
-        "data/image%20samples%20GPS/image%20copy%202.png",
-        "data/image%20samples%20GPS/image%20copy%203.png"
+        "data/image samples GPS/image copy.png",
+        "data/image samples GPS/image copy 2.png",
+        "data/image samples GPS/image copy 3.png"
       ],
-      "tags": [
-        "Python",
-        "Flask",
-        "Dijkstra",
-        "Folium",
-        "Data Viz"
-      ],
-      "category": "Data / Algorithms",
+      "tags": ["Python", "Flask", "NetworkX", "Folium", "Dijkstra", "A*"],
+      "category": "Algorithms",
       "links": {
-        "github": "https://github.com/tedrosweldegebriel465-eng/ethiopian-gps-navigation-system",
-        "live": ""
+        "github": "https://github.com/tedrosweldegebriel465-eng/ethiopian-gps-navigation-system"
       },
       "highlights": [
-        "Shortest path routing",
-        "Interactive dashboard",
-        "Network analytics",
-        "Visualizations"
-      ],
-      "meta": {
-        "stars": 0,
-        "forks": 0,
-        "updated_at": "2026-04-20T08:55:05Z",
-        "language": "HTML"
-      }
+        "Shortest-path calculations (Dijkstra & A*)",
+        "Interactive map visualizations (Folium)",
+        "Route analysis between Ethiopian cities",
+        "Network analytics and centrality",
+        "Geographic distance calculations"
+      ]
     },
     {
-      "id": "inventory-system",
-      "title": "IMS - Inventory Management System",
-      "subtitle": "",
-      "description": "",
-      "image": "data/image%20samples%20IMS/image.png",
+      "id": "merkatostock",
+      "title": "MerkatoStock — Inventory Management",
+      "subtitle": "Web-based inventory system for business stock management",
+      "description": "A web-based inventory management system helping businesses manage products, suppliers, stock operations, and inventory records. Includes role-based access, CSV reporting, and activity logging.",
+      "image": "data/image samples IMS/Home.png",
       "gallery": [
-        "data/image%20samples%20IMS/image%20copy.png",
-        "data/image%20samples%20IMS/image%20copy%202.png",
-        "data/image%20samples%20IMS/image%20copy%203.png"
+        "data/image samples IMS/login.png",
+        "data/image samples IMS/dashboard.png",
+        "data/image samples IMS/Categories.png",
+        "data/image samples IMS/Suppliers.png",
+        "data/image samples IMS/users.png"
       ],
-      "tags": [
-        "PHP",
-        "CSS",
-        "JavaScript"
-      ],
+      "tags": ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
       "category": "Web App",
       "links": {
-        "github": "https://github.com/tedrosweldegebriel465-eng/ims-inventory-management-system",
-        "live": ""
+        "github": "https://github.com/tedrosweldegebriel465-eng/ims-inventory-management-system"
       },
       "highlights": [
-        "Inventory workflows",
-        "Management UI",
-        "Responsive layout"
-      ],
-      "meta": {
-        "stars": 0,
-        "forks": 0,
-        "updated_at": "2026-02-04T11:54:25Z",
-        "language": "PHP"
-      }
+        "Role-based access control",
+        "Product and supplier management",
+        "Stock-in and stock-out tracking",
+        "Inventory history",
+        "CSV reports",
+        "Activity logs"
+      ]
     },
     {
-      "id": "ai-tutor",
-      "title": "AI Learning Tutor (In Progress)",
+      "id": "ai-learning-tutor",
+      "title": "AI Learning Tutor",
       "subtitle": "AI-based education assistant for students",
-      "description": "An AI-based app to help students learn faster with explanations, practice, and personalized guidance. (Currently in development.)",
-      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=700&fit=crop",
-      "tags": [
-        "AI",
-        "Education",
-        "In Progress"
+      "description": "An AI-powered application to help students learn faster with personalized explanations, practice exercises, and guided feedback. Currently in active development.",
+      "image": "data/AI Learning Tutor (In Progress)/image.png",
+      "gallery": [
+        "data/AI Learning Tutor (In Progress)/{1D961B25-3D7A-4977-ADD6-30FECA419095}.png"
       ],
+      "tags": ["AI", "Education", "In Progress"],
       "category": "In Progress",
       "links": {},
       "highlights": [
         "Personalized learning support",
-        "Practice + feedback loops",
+        "Practice and feedback loops",
         "Education-focused UX"
-      ],
-      "status": "In Progress"
-    },
-    {
-      "id": "ai-classroom",
-      "title": "AI Classroom Tools (In Progress)",
-      "subtitle": "AI utilities for teachers and learning content",
-      "description": "AI tools focused on helping teachers and improving learning content workflows. (Currently in development.)",
-      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=700&fit=crop",
-      "tags": [
-        "AI",
-        "Education",
-        "In Progress"
-      ],
-      "category": "In Progress",
-      "links": {},
-      "highlights": [
-        "Teacher workflows",
-        "Content support",
-        "Better classroom experience"
       ],
       "status": "In Progress"
     }

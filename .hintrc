@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "outline: 3px solid color-mix(in oklab, var(--accent) 85%, white)",
+          "backdrop-filter"
+        ]
+      }
+    ]
+  }
+}

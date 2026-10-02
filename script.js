@@ -17,7 +17,7 @@ function escapeHtml(str) {
         .replaceAll("'", '&#039;');
 }
 
-// Theme Toggle
+// ─── Theme Toggle ─────────────────────────────────────────────────────────────
 const themeToggle = qs('#themeToggle');
 const body = document.body;
 
@@ -42,23 +42,25 @@ themeToggle?.addEventListener('click', () => {
     updateThemeIcon(isLight);
 });
 
-// Mobile Navigation
+// ─── Mobile Navigation ────────────────────────────────────────────────────────
 const hamburger = qs('.hamburger');
 const navLinks = qs('.nav-links');
 
 hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
+    const isExpanded = hamburger.classList.toggle('active');
     navLinks?.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', String(isExpanded));
 });
 
 qsa('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger?.classList.remove('active');
         navLinks?.classList.remove('active');
+        hamburger?.setAttribute('aria-expanded', 'false');
     });
 });
 
-// Smooth scrolling for anchor links (respect reduced motion)
+// ─── Smooth scrolling (respect reduced motion) ────────────────────────────────
 qsa('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -73,69 +75,140 @@ qsa('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Fallback data (used if data/projects.json can't be loaded)
+// ─── Fallback project data ────────────────────────────────────────────────────
+// Kept in sync with data/projects.json. Used when the JSON file cannot be fetched.
 const fallbackProjects = [
     {
         id: 'graduate-job-connect',
-        title: 'Graduate Job Connect (Job Portal)',
-        subtitle: 'Role-based job portal for graduates, employers, and admins',
-        description: 'University project job portal with role-based authentication, job posting, applications, admin management, and CV upload.',
+        title: 'Graduate Job Connect',
+        subtitle: 'Graduate employment and recruitment platform for Ethiopia',
+        description: 'A full-stack recruitment platform connecting graduates with employers and job opportunities across Ethiopia. Features role-based accounts, job discovery, applications, and email OTP verification.',
         image: 'data/Graduate Job Connect/image.png',
-        tags: ['PHP', 'MySQL', 'CSS', 'JavaScript'],
+        gallery: [
+            'data/Graduate Job Connect/image copy.png',
+            'data/Graduate Job Connect/image copy 2.png',
+            'data/Graduate Job Connect/image copy 3.png'
+        ],
+        tags: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'bcrypt', 'HTML5', 'CSS3', 'JavaScript'],
         category: 'Web App',
         links: {
-            github: 'https://github.com/tedrosweldegebriel465-eng/Web---programming-project'
+            github: 'https://github.com/tedrosweldegebriel465-eng/Graduate-Job-Connect-GJC-'
         },
-        highlights: ['Role-based authentication', 'Job posting & applications', 'Admin dashboard', 'CV upload']
+        highlights: [
+            'Graduate and employer accounts',
+            'Authentication and role-based access',
+            'Job discovery and search',
+            'Job applications',
+            'Email OTP verification',
+            'Administrative functionality'
+        ]
+    },
+    {
+        id: 'currency-arbitrage',
+        title: 'Currency Arbitrage Detector',
+        subtitle: 'Graph-based financial algorithm for detecting arbitrage opportunities',
+        description: 'A Python research project that models currency exchange markets as weighted directed graphs and detects potential arbitrage using the Bellman-Ford algorithm. Includes synthetic data generation and exchange rate analysis.',
+        image: 'data/currency arbitrage/image.png',
+        gallery: [],
+        tags: ['Python', 'Bellman-Ford', 'Graph Theory', 'Data Visualization', 'Algorithms'],
+        category: 'Algorithms',
+        links: {
+            github: 'https://github.com/tedrosweldegebriel465-eng/currency-arbitrage'
+        },
+        highlights: [
+            'Currency exchange rate analysis',
+            'Weighted directed graph modeling',
+            'Negative cycle detection (Bellman-Ford)',
+            'Arbitrage opportunity identification',
+            'Synthetic data generation'
+        ]
+    },
+    {
+        id: 'connecthub',
+        title: 'ConnectHub',
+        subtitle: 'Social networking application with real-time interaction',
+        description: 'A social networking application built with Node.js and Express. Features user registration, JWT authentication, social interaction, and real-time communication via Socket.IO.',
+        image: 'data/connecthub/image.png',
+        gallery: [],
+        tags: ['Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'JWT', 'bcrypt'],
+        category: 'Web App',
+        links: {
+            github: 'https://github.com/tedrosweldegebriel465-eng/ConnectHub'
+        },
+        highlights: [
+            'User registration and authentication',
+            'JWT-based session management',
+            'Real-time communication (Socket.IO)',
+            'Social interaction features',
+            'RESTful API design'
+        ]
     },
     {
         id: 'ethiopian-gps',
         title: 'Ethiopian GPS Navigation System',
-        subtitle: 'Graph algorithms + analytics + interactive web dashboard',
-        description: 'GPS navigation simulation using Dijkstra’s algorithm, geographic calculations, and network analytics, with a Flask-powered interactive dashboard and map visualizations.',
-        image: 'data/image samples GPS/image copy.png',
-        tags: ['Python', 'Flask', 'Dijkstra', 'Folium', 'Data Viz'],
-        category: 'Data / Algorithms',
+        subtitle: 'Route analysis using graph algorithms and interactive maps',
+        description: 'A navigation and route analysis application using graph algorithms to find routes between Ethiopian cities. Built with Python and Flask, featuring interactive Folium maps and network analytics.',
+        image: 'data/image samples GPS/image.png',
+        gallery: [
+            'data/image samples GPS/image copy.png',
+            'data/image samples GPS/image copy 2.png',
+            'data/image samples GPS/image copy 3.png'
+        ],
+        tags: ['Python', 'Flask', 'NetworkX', 'Folium', 'Dijkstra', 'A*'],
+        category: 'Algorithms',
         links: {
             github: 'https://github.com/tedrosweldegebriel465-eng/ethiopian-gps-navigation-system'
         },
-        highlights: ['Shortest path routing (Dijkstra)', 'Network analytics (centrality)', 'Interactive map dashboard', 'Reports & visualizations']
+        highlights: [
+            'Shortest-path calculations (Dijkstra & A*)',
+            'Interactive map visualizations (Folium)',
+            'Route analysis between Ethiopian cities',
+            'Network analytics and centrality',
+            'Geographic distance calculations'
+        ]
     },
     {
-        id: 'inventory-system',
-        title: 'Inventory System Web App',
-        subtitle: 'Inventory workflows + management screens',
-        description: 'Inventory system web project built for university work. Includes core inventory workflows and management UI.',
+        id: 'merkatostock',
+        title: 'MerkatoStock — Inventory Management',
+        subtitle: 'Web-based inventory system for business stock management',
+        description: 'A web-based inventory management system helping businesses manage products, suppliers, and stock operations. Includes role-based access, CSV reporting, and activity logging.',
         image: 'data/image samples IMS/Home.png',
-        tags: ['PHP', 'CSS', 'JavaScript'],
+        gallery: [
+            'data/image samples IMS/login.png',
+            'data/image samples IMS/dashboard.png',
+            'data/image samples IMS/Categories.png',
+            'data/image samples IMS/Suppliers.png',
+            'data/image samples IMS/users.png'
+        ],
+        tags: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
         category: 'Web App',
         links: {
             github: 'https://github.com/tedrosweldegebriel465-eng/ims-inventory-management-system'
         },
-        highlights: ['Inventory workflows', 'Simple admin-style UI', 'Responsive layout']
+        highlights: [
+            'Role-based access control',
+            'Product and supplier management',
+            'Stock-in and stock-out tracking',
+            'Inventory history',
+            'CSV reports',
+            'Activity logs'
+        ]
     },
     {
-        id: 'ai-tutor',
-        title: 'AI Learning Tutor (In Progress)',
+        id: 'ai-learning-tutor',
+        title: 'AI Learning Tutor',
         subtitle: 'AI-based education assistant for students',
-        description: 'An AI-based app to help students learn faster with explanations, practice, and personalized guidance. (Currently in development.)',
-        image: 'data/AI Learning Tutor (In Progress)/{1D961B25-3D7A-4977-ADD6-30FECA419095}.png',
-        tags: ['AI', 'Education', 'In Progress'],
-        category: 'In Progress',
-        links: {},
-        highlights: ['Personalized learning support', 'Practice + feedback loops', 'Education-focused UX'],
-        status: 'In Progress'
-    },
-    {
-        id: 'ai-classroom',
-        title: 'AI Classroom Tools (In Progress)',
-        subtitle: 'AI utilities for teachers and learning content',
-        description: 'A second AI-based educational application focused on helping teachers and improving learning content workflows. (Currently in development.)',
+        description: 'An AI-powered application to help students learn faster with personalized explanations, practice exercises, and guided feedback. Currently in active development.',
         image: 'data/AI Learning Tutor (In Progress)/image.png',
+        gallery: [],
         tags: ['AI', 'Education', 'In Progress'],
         category: 'In Progress',
         links: {},
-        highlights: ['Teacher workflows', 'Content support', 'Better classroom experience'],
+        highlights: [
+            'Personalized learning support',
+            'Practice and feedback loops',
+            'Education-focused UX'
+        ],
         status: 'In Progress'
     }
 ];
@@ -152,41 +225,7 @@ async function loadProjects() {
     }
 }
 
-const writing = [
-    {
-        title: 'CSS Grid vs Flexbox (Quick guide)',
-        date: '2026-04-12',
-        excerpt: 'When to use Grid vs Flexbox, and the mental models that make layouts easier.',
-        href: '#'
-    },
-    {
-        title: 'JavaScript performance checklist',
-        date: '2026-03-29',
-        excerpt: 'The small things that add up: rendering, event listeners, and avoiding unnecessary work.',
-        href: '#'
-    }
-];
-
-// Writing render
-const writingGrid = qs('#writingGrid');
-if (writingGrid) {
-    writingGrid.innerHTML = writing.map(post => {
-        const date = new Date(post.date);
-        const pretty = isNaN(date.getTime()) ? escapeHtml(post.date) : date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
-        return `
-            <article class="blog-card">
-                <div class="blog-content">
-                    <span class="blog-date">${pretty}</span>
-                    <h3>${escapeHtml(post.title)}</h3>
-                    <p>${escapeHtml(post.excerpt)}</p>
-                    <a href="${escapeHtml(post.href)}" class="read-more">Read More →</a>
-                </div>
-            </article>
-        `;
-    }).join('');
-}
-
-// Projects render + filter/search
+// ─── Projects render + filter/search ─────────────────────────────────────────
 const projectsGrid = qs('#projectsGrid');
 const projectFilters = qs('#projectFilters');
 const projectSearch = qs('#projectSearch');
@@ -211,9 +250,15 @@ function matchesProject(p) {
     return inCategory && inSearch;
 }
 
+function buildImageSrc(src) {
+    // Encode spaces properly for HTML src attributes
+    return src ? src.replace(/ /g, '%20') : '';
+}
+
 function renderProjects() {
     if (!projectsGrid) return;
     const filtered = projects.filter(matchesProject);
+
     if (filtered.length === 0) {
         projectsGrid.innerHTML = `<div class="project-card" style="padding:1.5rem;"><h3>No projects found</h3><p style="color:var(--text-secondary);margin-top:.5rem;">Try a different filter or search term.</p></div>`;
         return;
@@ -222,23 +267,24 @@ function renderProjects() {
     projectsGrid.innerHTML = filtered.map(p => `
         <article class="project-card">
             <div class="project-image">
-                <img loading="lazy" src="${escapeHtml(p.image)}" alt="${escapeHtml(p.title)}">
+                <img loading="lazy" src="${escapeHtml(buildImageSrc(p.image))}" alt="${escapeHtml(p.title)} screenshot">
                 <div class="project-overlay">
-                    <button class="project-link" type="button" data-project-open="${escapeHtml(p.id)}" aria-label="Open ${escapeHtml(p.title)} details">
-                        <i class="fas fa-up-right-from-square"></i>
+                    <button class="project-link" type="button" data-project-open="${escapeHtml(p.id)}" aria-label="View ${escapeHtml(p.title)} details">
+                        <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
             <div class="project-content">
+                ${p.status ? `<span class="project-status">${escapeHtml(p.status)}</span>` : ''}
                 <h3>${escapeHtml(p.title)}</h3>
                 <p>${escapeHtml(p.description)}</p>
-                <div class="project-tech">
+                <div class="project-tech" aria-label="Technologies used">
                     ${(p.tags ?? []).slice(0, 6).map(t => `<span>${escapeHtml(t)}</span>`).join('')}
                 </div>
                 <div class="project-links">
-                    <button type="button" class="project-btn" data-project-open="${escapeHtml(p.id)}">Details <i class="fas fa-arrow-right"></i></button>
-                    ${p.links?.live ? `<a href="${escapeHtml(p.links.live)}" target="_blank" rel="noreferrer" class="project-btn">Live <i class="fas fa-external-link-alt"></i></a>` : ''}
-                    ${p.links?.github ? `<a href="${escapeHtml(p.links.github)}" target="_blank" rel="noreferrer" class="project-btn">GitHub <i class="fab fa-github"></i></a>` : ''}
+                    <button type="button" class="project-btn" data-project-open="${escapeHtml(p.id)}">Details <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                    ${p.links?.live ? `<a href="${escapeHtml(p.links.live)}" target="_blank" rel="noreferrer" class="project-btn">Live <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>` : ''}
+                    ${p.links?.github ? `<a href="${escapeHtml(p.links.github)}" target="_blank" rel="noreferrer" class="project-btn">GitHub <i class="fab fa-github" aria-hidden="true"></i></a>` : ''}
                 </div>
             </div>
         </article>
@@ -261,7 +307,7 @@ projectSearch?.addEventListener('input', (e) => {
 renderFilters();
 renderProjects();
 
-// Load generated projects (Python can keep this updated)
+// Load from JSON (overrides fallback if successful)
 loadProjects().then((loaded) => {
     projects = loaded;
     allCategories = ['All', ...new Set(projects.map(p => p.category))];
@@ -270,7 +316,7 @@ loadProjects().then((loaded) => {
     renderProjects();
 });
 
-// Modal
+// ─── Modal ────────────────────────────────────────────────────────────────────
 const modal = qs('#projectModal');
 const modalBody = qs('#projectModalBody');
 let lastActiveEl = null;
@@ -293,56 +339,58 @@ function openProjectModal(id) {
 
     modalBody.innerHTML = `
         <div class="modal-hero">
-            <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.title)}">
+            <img src="${escapeHtml(buildImageSrc(p.image))}" alt="${escapeHtml(p.title)} screenshot">
         </div>
         ${gallery.length ? `
-            <div style="margin-top:0.9rem;">
-                <h3 style="margin-bottom:.5rem;">Screenshots</h3>
-                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:.75rem;">
-                    ${gallery.map(src => `
-                        <a href="${escapeHtml(src)}" target="_blank" rel="noreferrer" class="pill" style="justify-content:center;">
-                            <i class="fas fa-image"></i> Open
-                        </a>
+            <div style="margin-top:1rem;">
+                <h3 style="margin-bottom:.6rem;">Screenshots</h3>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:.75rem;">
+                    ${gallery.map((src, i) => `
+                        <img
+                            src="${escapeHtml(buildImageSrc(src))}"
+                            alt="${escapeHtml(p.title)} screenshot ${i + 2}"
+                            style="width:100%;height:110px;object-fit:cover;border-radius:8px;border:1px solid var(--border);"
+                            loading="lazy"
+                        >
                     `).join('')}
                 </div>
             </div>
         ` : ''}
         <div class="modal-header">
             <div>
-                <h2 style="margin-bottom:0.35rem;">${escapeHtml(p.title)}</h2>
-                <p>${escapeHtml(p.subtitle ?? p.description)}</p>
+                <h2 id="modalTitle" style="margin-bottom:0.35rem;">${escapeHtml(p.title)}</h2>
+                <p style="color:var(--text-secondary);">${escapeHtml(p.subtitle ?? '')}</p>
             </div>
             <div class="modal-actions" aria-label="Project links">
-                ${p.links?.live ? `<a class="pill" href="${escapeHtml(p.links.live)}" target="_blank" rel="noreferrer">Live <i class="fas fa-arrow-up-right-from-square"></i></a>` : ''}
-                ${p.links?.github ? `<a class="pill" href="${escapeHtml(p.links.github)}" target="_blank" rel="noreferrer">GitHub <i class="fab fa-github"></i></a>` : ''}
+                ${p.links?.live ? `<a class="pill" href="${escapeHtml(p.links.live)}" target="_blank" rel="noreferrer">Live <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>` : ''}
+                ${p.links?.github ? `<a class="pill" href="${escapeHtml(p.links.github)}" target="_blank" rel="noreferrer">GitHub <i class="fab fa-github" aria-hidden="true"></i></a>` : ''}
             </div>
         </div>
         <div style="margin-top:1rem;">
             <h3 style="margin-bottom:.5rem;">Overview</h3>
             <p style="color:var(--text-secondary);">${escapeHtml(p.description)}</p>
         </div>
-        ${(p.status ? `
+        ${p.status ? `
             <div style="margin-top:1rem;">
-                <h3 style="margin-bottom:.5rem;">Status</h3>
-                <p style="color:var(--text-secondary);">${escapeHtml(p.status)}</p>
+                <span class="project-status">${escapeHtml(p.status)}</span>
             </div>
-        ` : '')}
-        ${(p.highlights?.length ? `
+        ` : ''}
+        ${p.highlights?.length ? `
             <div style="margin-top:1rem;">
-                <h3 style="margin-bottom:.5rem;">Highlights</h3>
-                <ul style="color:var(--text-secondary); padding-left:1.2rem;">
+                <h3 style="margin-bottom:.5rem;">Features</h3>
+                <ul style="color:var(--text-secondary); padding-left:1.2rem; line-height:1.8;">
                     ${p.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join('')}
                 </ul>
             </div>
-        ` : '')}
-        ${(p.tags?.length ? `
+        ` : ''}
+        ${p.tags?.length ? `
             <div style="margin-top:1rem;">
-                <h3 style="margin-bottom:.5rem;">Tech</h3>
+                <h3 style="margin-bottom:.5rem;">Tech Stack</h3>
                 <div class="project-tech">
                     ${p.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('')}
                 </div>
             </div>
-        ` : '')}
+        ` : ''}
     `;
 
     setModalOpen(true);
@@ -367,58 +415,25 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Animate skill bars + stats (IntersectionObserver)
-const skillBars = qsa('.skill-progress');
-const stats = qsa('.stat-number');
-
-const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        if (el.classList.contains('skill-progress') && !el.style.width) {
-            const width = el.getAttribute('data-width');
-            el.style.width = width + '%';
-        }
-        if (el.classList.contains('stat-number') && !el.hasAttribute('data-animated')) {
-            el.setAttribute('data-animated', 'true');
-            const target = parseInt(el.getAttribute('data-target'), 10);
-            if (!Number.isFinite(target)) return;
-            let current = 0;
-            const steps = 50;
-            const increment = target / steps;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    el.textContent = String(target);
-                    clearInterval(timer);
-                } else {
-                    el.textContent = String(Math.floor(current));
-                }
-            }, prefersReducedMotion ? 5 : 20);
-        }
-        io.unobserve(el);
-    });
-}, { threshold: 0.25 }) : null;
-
-skillBars.forEach(el => io?.observe(el));
-stats.forEach(el => io?.observe(el));
-
-// Navbar scroll effect + scrollspy active section
+// ─── Navbar scroll + scrollspy ────────────────────────────────────────────────
 const navbar = qs('.navbar');
 const sections = qsa('section[id]');
 const navAnchors = qsa('.nav-links a[href^="#"]');
 
 function setActiveNav(id) {
     navAnchors.forEach(a => {
-        const href = a.getAttribute('href');
-        a.classList.toggle('active', href === `#${id}`);
+        a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
     });
 }
 
-const spy = ('IntersectionObserver' in window) ? new IntersectionObserver((entries) => {
-    const visible = entries.filter(e => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (visible?.target?.id) setActiveNav(visible.target.id);
-}, { rootMargin: '-20% 0px -70% 0px', threshold: [0.1, 0.2, 0.3] }) : null;
+const spy = ('IntersectionObserver' in window)
+    ? new IntersectionObserver((entries) => {
+        const visible = entries
+            .filter(e => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible?.target?.id) setActiveNav(visible.target.id);
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: [0.1, 0.2, 0.3] })
+    : null;
 
 sections.forEach(s => spy?.observe(s));
 
@@ -435,62 +450,141 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// Back to top
+// ─── Back to top ──────────────────────────────────────────────────────────────
 qs('#backToTop')?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 });
 
-// Form submission feedback
+// ─── Contact form feedback ────────────────────────────────────────────────────
 const contactForm = qs('.contact-form');
-contactForm?.addEventListener('submit', () => {
+contactForm?.addEventListener('submit', (e) => {
     const submitBtn = qs('button[type="submit"]', contactForm);
     if (!submitBtn) return;
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>';
     submitBtn.disabled = true;
+    // Netlify handles the actual submission; re-enable after delay as fallback
     setTimeout(() => {
-        submitBtn.innerHTML = originalText;
+        submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i>';
         submitBtn.disabled = false;
-    }, 3000);
+    }, 5000);
 });
 
-// Dynamic year in footer
-const footerYear = qs('.footer-content p');
+// ─── Dynamic footer year ──────────────────────────────────────────────────────
+const footerYear = qs('#footerYear');
 if (footerYear) {
-    const year = new Date().getFullYear();
-    footerYear.innerHTML = footerYear.innerHTML.replace('2026', String(year));
+    footerYear.textContent = String(new Date().getFullYear());
 }
 
-// Typing effect (skip for reduced motion)
-const heroTitle = qs('.hero-text h2');
-if (heroTitle && !prefersReducedMotion) {
-    const roles = ['Front-End Developer', 'UI Enthusiast', 'Problem Solver'];
+// ─── Typing effect (skip for reduced motion) ──────────────────────────────────
+const heroRole = qs('.hero-role');
+const heroCursor = qs('.hero-cursor');
+
+if (heroRole && !prefersReducedMotion) {
+    const roles = [
+        'Junior Full-Stack Developer',
+        'Web Application Developer',
+        'Software Development Enthusiast'
+    ];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
+    let typeTimer = null;
+
+    // Hide the static cursor blink while typing (JS drives visibility via text)
+    if (heroCursor) heroCursor.style.animation = 'none';
 
     function typeEffect() {
         const currentRole = roles[roleIndex];
-        heroTitle.textContent = isDeleting
-            ? currentRole.substring(0, Math.max(0, charIndex - 1))
-            : currentRole.substring(0, Math.min(currentRole.length, charIndex + 1));
 
-        charIndex += isDeleting ? -1 : 1;
+        if (isDeleting) {
+            charIndex--;
+            heroRole.textContent = currentRole.substring(0, charIndex);
+        } else {
+            charIndex++;
+            heroRole.textContent = currentRole.substring(0, charIndex);
+        }
+
+        // Show/hide cursor
+        if (heroCursor) heroCursor.style.opacity = '1';
+
+        let delay = isDeleting ? 42 : 80;
 
         if (!isDeleting && charIndex === currentRole.length) {
+            // Finished typing — pause then start deleting
             isDeleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-        }
-        if (isDeleting && charIndex <= 0) {
+            if (heroCursor) heroCursor.style.animation = 'blink 1s step-end infinite';
+            delay = 2200;
+        } else if (isDeleting && charIndex === 0) {
+            // Finished deleting — move to next role
             isDeleting = false;
+            if (heroCursor) heroCursor.style.animation = 'none';
             roleIndex = (roleIndex + 1) % roles.length;
+            delay = 350;
+        } else {
+            if (heroCursor) heroCursor.style.animation = 'none';
         }
-        setTimeout(typeEffect, isDeleting ? 50 : 90);
+
+        typeTimer = setTimeout(typeEffect, delay);
     }
 
-    setTimeout(typeEffect, 400);
+    // Initial delay before starting
+    typeTimer = setTimeout(typeEffect, 900);
+} else {
+    // Reduced motion: just show the first role statically, hide animated cursor
+    if (heroRole) heroRole.textContent = 'Junior Full-Stack Developer';
+    if (heroCursor) heroCursor.style.display = 'none';
 }
 
-// Console greeting
-console.log('%cWelcome to Tedros\' Portfolio', 'color: #38bdf8; font-size: 14px; font-weight: 800;');
+// ─── About section: scroll reveal ────────────────────────────────────────────
+(function initAboutReveal() {
+    if (prefersReducedMotion) {
+        qsa('.about-reveal').forEach(el => el.classList.add('is-visible'));
+        return;
+    }
+
+    const aboutContainer = qs('.about .container');
+    if (!aboutContainer) return;
+
+    // Tag direct children for staggered reveal
+    [...aboutContainer.children].forEach(el => el.classList.add('about-reveal'));
+
+    if (!('IntersectionObserver' in window)) {
+        qsa('.about-reveal').forEach(el => el.classList.add('is-visible'));
+        return;
+    }
+
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                revealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    qsa('.about-reveal').forEach(el => revealObs.observe(el));
+})();
+
+// ─── Experience section: scroll reveal ───────────────────────────────────────
+(function initExpReveal() {
+    if (prefersReducedMotion) return;
+    if (!('IntersectionObserver' in window)) return;
+
+    // Tag each exp-panel for staggered reveal
+    qsa('.exp-panel').forEach(panel => panel.classList.add('exp-reveal'));
+
+    const expObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                expObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    qsa('.exp-reveal').forEach(el => expObs.observe(el));
+})();
+
+// ─── Console greeting ─────────────────────────────────────────────────────────
+console.log('%cTedros Weldegebriel — Junior Full-Stack Developer', 'color: #38bdf8; font-size: 14px; font-weight: 800;');
+console.log('%cAksum University · CGPA 3.75/4.00', 'color: #94a3b8; font-size: 12px;');

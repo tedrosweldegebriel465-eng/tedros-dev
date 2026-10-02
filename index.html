@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tedros' portfolio - front-end developer building modern web experiences">
-    <meta name="author" content="Tedros">
-    <title>Tedros | Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Tedros Weldegebriel — Junior Full-Stack Developer and Computer Science student at Aksum University. Building practical web applications and backend systems.">
+    <meta name="author" content="Tedros Weldegebriel">
+    <meta name="keywords" content="Tedros Weldegebriel, full-stack developer, web developer, Computer Science, Aksum University, Ethiopia, Node.js, PHP, Python, MongoDB">
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:title" content="Tedros Weldegebriel | Junior Full-Stack Developer">
+    <meta property="og:description" content="Computer Science student building practical web applications and backend systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tedrosdev.netlify.app">
+
+    <title>Tedros Weldegebriel | Junior Full-Stack Developer</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,577 +26,724 @@
     <a class="skip-link" href="#home">Skip to content</a>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo">
-                <a href="#">TedrosDev</a>
+                <a href="#home">TedrosDev</a>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" role="list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#writing">Writing</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-controls">
                 <button id="themeToggle" class="theme-btn" aria-label="Toggle dark/light mode">
                     <i class="fas fa-moon"></i>
                 </button>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="navLinks">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ═══════════════════════════════════════════ HERO ═══ -->
     <section id="home" class="hero">
+        <!-- Subtle background orbs -->
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-orb hero-orb--1"></div>
+            <div class="hero-orb hero-orb--2"></div>
+            <div class="hero-orb hero-orb--3"></div>
+        </div>
+
         <div class="container">
             <div class="hero-content">
+
+                <!-- ── Left: text ── -->
                 <div class="hero-text">
-                    <span class="badge">Welcome to my portfolio</span>
-                    <h1>Hi, I'm <span class="highlight">Tedros</span></h1>
-                    <h2>Aspiring Full-Stack Developer</h2>
-                    <p>I build modern, responsive, and high-performance websites that deliver exceptional user experiences. Currently pursuing Computer Science and passionate about creating beautiful web applications.</p>
+
+                    <div class="hero-badge-row">
+                        <span class="badge badge--pulse">
+                            <span class="badge-dot" aria-hidden="true"></span>
+                            Open to internships &amp; opportunities
+                        </span>
+                    </div>
+
+                    <h1>Hi, I'm <span class="highlight">Tedros</span><br>Weldegebriel</h1>
+
+                    <!-- Typing wrapper keeps a stable height via min-height -->
+                    <div class="hero-role-wrap" aria-label="Current role">
+                        <span class="hero-role-prefix">I'm a&nbsp;</span><span class="hero-role" aria-live="polite" aria-atomic="true">Junior Full-Stack Developer</span><span class="hero-cursor" aria-hidden="true">|</span>
+                    </div>
+
+                    <p class="hero-intro">
+                        Building practical software solutions — from responsive frontends to scalable backends. I enjoy solving real-world problems and turning ideas into working applications.
+                    </p>
+
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="#projects" class="btn btn-primary btn--hero">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            Explore My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary btn--hero">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Contact Me
+                        </a>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/tedrosweldegebriel465-eng" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/tedros-dev369/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/@TedrosDev" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="mailto:tedrosweldegebriel465@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+
+                    <div class="hero-meta">
+                        <div class="social-links">
+                            <a href="https://github.com/tedrosweldegebriel465-eng" target="_blank" rel="noreferrer" aria-label="GitHub profile" class="social-link">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tedros-dev369/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile" class="social-link">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="mailto:tedrosweldegebriel465@gmail.com" aria-label="Send email" class="social-link">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <div class="hero-stack-pills" aria-label="Key technologies">
+                            <span class="stack-pill"><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</span>
+                            <span class="stack-pill"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                            <span class="stack-pill"><i class="fas fa-database" aria-hidden="true"></i> MongoDB</span>
+                        </div>
                     </div>
+
                 </div>
+
+                <!-- ── Right: photo + floating chips ── -->
                 <div class="hero-image">
-    <img src="screenshots/my photo.png" 
-         alt="Tedros Profile Photo" 
-         class="profile-photo">
-</div>
+                    <div class="hero-photo-wrap">
+                        <!-- Animated gradient ring -->
+                        <div class="photo-ring" aria-hidden="true"></div>
+
+                        <img
+                            src="screenshots/my photo.png"
+                            alt="Tedros Weldegebriel — Junior Full-Stack Developer"
+                            class="profile-photo"
+                            width="300"
+                            height="300"
+                        >
+
+                        <!-- Floating info chips -->
+                        <div class="hero-chip hero-chip--tl" aria-hidden="true">
+                            <i class="fas fa-code"></i>
+                            <span>Full-Stack Dev</span>
+                        </div>
+                        
+                        <div class="hero-chip hero-chip--tr" aria-hidden="true">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Aksum, ET</span>
+                        </div>
+                    </div>
                 </div>
+
+            </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <a href="#about" class="hero-scroll-hint" aria-label="Scroll to About section">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <!-- ════ABOUT ═══ -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <!-- Standard centered section header — matches all other sections -->
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+
+            <!-- ── A: Intro — statement (left) + profile panel (right) ── -->
+            <div class="about-intro">
+
+                <div class="about-left">
+
+                    <h3 class="about-heading">
+                        I build software that<br>
+                        <span class="highlight">solves real problems.</span>
+                    </h3>
+
+                    <p class="about-bio">
+                        I'm a fourth-year Computer Science student at Aksum University and a Junior Full-Stack Developer focused on building practical web applications and backend systems. I enjoy working across frontend interfaces, backend logic, APIs, and databases — connecting these pieces into complete applications.
+                    </p>
+
+                    <div class="about-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            View Projects
+                        </a>
+                        <a href="#contact" class="about-cta-link">
+                            Let's connect <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Developer profile panel -->
+                <aside class="about-profile" aria-label="Developer profile">
+
+                    <div class="about-profile-item">
+                        <span class="about-profile-label">
+                            <i class="fas fa-code" aria-hidden="true"></i>Role
+                        </span>
+                        <span class="about-profile-value">Junior Full-Stack Developer</span>
+                    </div>
+
+                    <div class="about-profile-item">
+                        <span class="about-profile-label">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>Education
+                        </span>
+                        <span class="about-profile-value">
+                            BSc Computer Science<br>
+                            <span class="about-profile-sub">Aksum University</span>
+                        </span>
+                    </div>
+
+                    <div class="about-profile-item">
+                        <span class="about-profile-label">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i>Current stage
+                        </span>
+                        <span class="about-profile-value">4th Year</span>
+                    </div>
+
+                    <div class="about-profile-item">
+                        <span class="about-profile-label">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>Based in
+                        </span>
+                        <span class="about-profile-value">Aksum, Ethiopia</span>
+                    </div>
+
+                    <div class="about-profile-item">
+                        <span class="about-profile-label">
+                            <i class="fas fa-compass" aria-hidden="true"></i>Direction
+                        </span>
+                        <span class="about-profile-value">Growing toward Senior<br>Full-Stack Development</span>
+                    </div>
+
+                </aside>
+
+            </div>
+
+            <!-- ── E: Development journey ── -->
+            <div class="about-journey" aria-label="Development journey">
+                <ol class="about-journey-list">
+
+                    <li class="about-journey-item">
+                        <div class="about-journey-dot" aria-hidden="true"></div>
+                        <div class="about-journey-content">
+                            <span class="about-journey-year">2023</span>
+                            <span class="about-journey-text">Started Computer Science studies at Aksum University</span>
+                        </div>
+                    </li>
+
+                    <li class="about-journey-item">
+                        <div class="about-journey-dot" aria-hidden="true"></div>
+                        <div class="about-journey-content">
+                            <span class="about-journey-year">2025</span>
+                            <span class="about-journey-text">Expanded into practical web development projects</span>
+                        </div>
+                    </li>
+
+                    <li class="about-journey-item">
+                        <div class="about-journey-dot" aria-hidden="true"></div>
+                        <div class="about-journey-content">
+                            <span class="about-journey-year">2026</span>
+                            <span class="about-journey-text">Focused on full-stack application development</span>
+                        </div>
+                    </li>
+
+                    <li class="about-journey-item about-journey-item--now">
+                        <div class="about-journey-dot about-journey-dot--now" aria-hidden="true"></div>
+                        <div class="about-journey-content">
+                            <span class="about-journey-year">Now</span>
+                            <span class="about-journey-text">Building and improving complete full-stack applications</span>
+                        </div>
+                    </li>
+
+                </ol>
+            </div>
+
+            <!-- ── F: What I work on ── -->
+            <div class="about-focus">
+
+                <h3 class="about-focus-heading">
+                    <span class="about-focus-label">What I work on</span>
+                </h3>
+
+                <ul class="about-focus-list" aria-label="Focus areas">
+
+                    <li class="about-focus-item">
+                        <span class="about-focus-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
+                        <span class="about-focus-name">Full-Stack Web Development</span>
+                    </li>
+
+                    <li class="about-focus-item">
+                        <span class="about-focus-icon" aria-hidden="true"><i class="fas fa-server"></i></span>
+                        <span class="about-focus-name">Backend Engineering</span>
+                    </li>
+
+                    <li class="about-focus-item">
+                        <span class="about-focus-icon" aria-hidden="true"><i class="fas fa-plug"></i></span>
+                        <span class="about-focus-name">REST APIs</span>
+                    </li>
+
+                    <li class="about-focus-item">
+                        <span class="about-focus-icon" aria-hidden="true"><i class="fas fa-database"></i></span>
+                        <span class="about-focus-name">Database Design</span>
+                    </li>
+
+                    <li class="about-focus-item">
+                        <span class="about-focus-icon" aria-hidden="true"><i class="fas fa-drafting-compass"></i></span>
+                        <span class="about-focus-name">Software Architecture</span>
+                    </li>
+
+                    <li class="about-focus-item">
+                        <span class="about-focus-icon" aria-hidden="true"><i class="fas fa-brain"></i></span>
+                        <span class="about-focus-name">Algorithms &amp; Problem Solving</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- ── G+H: Philosophy + CTA ── -->
+            <div class="about-philosophy">
+
+                <div class="about-philosophy-inner">
+                    <span class="about-philosophy-label">How I approach development</span>
+                    <p class="about-philosophy-text">
+                        I learn by building, improve by solving problems, and focus on turning ideas into working software.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════ EXPERIENCE ═══ -->
+    <section id="experience" class="experience">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Experience &amp; Education</h2>
+                <div class="underline"></div>
+                <p>My background and academic journey</p>
+            </div>
+
+            <div class="exp-grid">
+
+                <!-- ══ LEFT: Experience ══ -->
+                <div class="exp-panel">
+
+                    <div class="exp-panel-header">
+                        <div class="exp-panel-icon exp-panel-icon--work" aria-hidden="true">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h3 class="exp-panel-title">Experience</h3>
+                            <p class="exp-panel-subtitle">Professional work</p>
+                        </div>
+                    </div>
+
+                    <div class="exp-card exp-card--work">
+
+                        <div class="exp-card-top">
+                            <div class="exp-card-title-block">
+                                <h4 class="exp-card-role">Web Development Intern</h4>
+                                <span class="exp-card-org">
+                                    <i class="fas fa-building" aria-hidden="true"></i>
+                                    Aksum University
+                                </span>
+                            </div>
+                            <div class="exp-card-meta">
+                                <span class="exp-card-period">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    Nov 2023 — Present
+                                </span>
+                                <span class="exp-badge exp-badge--remote">
+                                    <i class="fas fa-wifi" aria-hidden="true"></i>Remote
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="exp-card-desc">
+                            Built and contributed to web applications in a remote setting, working across frontend interfaces and backend logic, and applying software engineering practices throughout the development cycle.
+                        </p>
+
+                        <div class="exp-card-footer">
+                            <span class="exp-card-footer-label">Technologies</span>
+                            <ul class="exp-tags" aria-label="Technologies used">
+                                <li>HTML / CSS / JS</li>
+                                <li>Node.js</li>
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                                <li>REST APIs</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ── Column divider ── -->
+                <div class="exp-col-divider" aria-hidden="true"></div>
+
+                <!-- ══ RIGHT: Education ══ -->
+                <div class="exp-panel">
+
+                    <div class="exp-panel-header">
+                        <div class="exp-panel-icon exp-panel-icon--edu" aria-hidden="true">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="exp-panel-title">Education</h3>
+                            <p class="exp-panel-subtitle">Academic background</p>
+                        </div>
+                    </div>
+
+                    <div class="exp-card exp-card--edu">
+
+                        <div class="exp-card-top">
+                            <div class="exp-card-title-block">
+                                <h4 class="exp-card-role">BSc Computer Science</h4>
+                                <span class="exp-card-org">
+                                    <i class="fas fa-university" aria-hidden="true"></i>
+                                    Aksum University
+                                </span>
+                            </div>
+                            <div class="exp-card-meta">
+                                <span class="exp-card-period">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    2021 — Present
+                                </span>
+                                <span class="exp-badge exp-badge--year">4th Year</span>
+                            </div>
+                        </div>
+
+                        <p class="exp-card-desc">
+                            Studying core Computer Science fundamentals including data structures, algorithms, software engineering, databases, and networking, and applying them through academic projects and independent development work.
+                        </p>
+
+                        <div class="exp-card-footer">
+                            <span class="exp-card-footer-label">Focus areas</span>
+                            <ul class="exp-tags" aria-label="Areas of study">
+                                <li>Algorithms</li>
+                                <li>Software Engineering</li>
+                                <li>Databases</li>
+                                <li>OOP</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
 
-        <div class="section-header">
-            <h2>About Me</h2>
-            <div class="underline"></div>
-        </div>
+    <!-- ═══════════════════════════════════════════ PROJECTS ═══ -->
+    <section id="projects" class="projects">
+        <div class="container">
 
-        <div class="about-content">
-            <div class="about-grid">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="underline"></div>
+                <p>Applications I've built across the full stack</p>
+            </div>
 
-                <div class="about-text">
+            <!-- Toolbar -->
+            <div class="projects-toolbar" role="region" aria-label="Project filters">
 
-                    <p>
-                        I’m a <strong>Computer Science student @ Aksum University</strong> (4th year), focused on building practical software systems
-                        and strengthening my skills in <strong>full-stack web development</strong> and <strong>core software engineering fundamentals</strong>.
-                    </p>
-
-                    <p>
-                        My main interest is understanding how systems work end-to-end — from frontend interfaces to backend logic and data handling.
-                        I enjoy turning ideas into working applications that solve real problems and help me improve as a developer.
-                    </p>
-
-                    <div class="fun-facts">
-
-                        <div class="fact">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Full-stack mindset</span>
-                        </div>
-
-                        <div class="fact">
-                            <i class="fas fa-diagram-project"></i>
-                            <span>Projects that solve real problems</span>
-                        </div>
-
-                        <div class="fact">
-                            <i class="fas fa-database"></i>
-                            <span>Strong CS fundamentals</span>
-                        </div>
-
-                    </div>
-
+                <div class="project-filters" id="projectFilters" role="tablist" aria-label="Filter by category">
+                    <!-- Filled by script.js -->
                 </div>
 
-                <div class="about-visual">
-
-                    <div class="focus-card">
-
-                        <div class="focus-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-
-                        <h3>What I Focus On</h3>
-
-                        <div class="focus-grid" aria-label="Focus areas">
-
-                            <div class="focus-item">
-                                <i class="fas fa-code"></i>
-                                <span>Full-Stack Web (Frontend + Backend)</span>
-                            </div>
-
-                            <div class="focus-item">
-                                <i class="fas fa-database"></i>
-                                <span>Data workflows & database fundamentals</span>
-                            </div>
-
-                            <div class="focus-item">
-                                <i class="fas fa-compass-drafting"></i>
-                                <span>Software design & system development</span>
-                            </div>
-
-                            <div class="focus-item">
-                                <i class="fas fa-brain"></i>
-                                <span>Data Structures & Algorithmic Problem Solving</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="callout">
-
-                        <div class="callout-top">
-                            <i class="fas fa-road"></i>
-                            <h3>Current Direction</h3>
-                        </div>
-
-                        <p>
-                            I’m strengthening my full-stack development skills while exploring backend systems and data-focused applications.
-                            My goal is to build scalable software systems and gain real-world engineering experience.
-                        </p>
-
-                        <div class="callout-bottom">
-                            <span class="chip"><i class="fas fa-flag"></i> Goal</span>
-                            <span>Grow into a software engineer strong in both application and data systems.</span>
-                        </div>
-
-                    </div>
-
+                <div class="project-search">
+                    <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                    <input
+                        id="projectSearch"
+                        type="search"
+                        placeholder="Search projects..."
+                        autocomplete="off"
+                        aria-label="Search projects"
+                    >
                 </div>
 
             </div>
-        </div>
 
-    </div>
-</section>
-
-    <!-- Experience Section -->
-<section id="experience" class="experience">
-    <div class="container">
-
-        <div class="section-header">
-            <h2>Experience</h2>
-            <div class="underline"></div>
-            <p>What I’ve been building and learning</p>
-        </div>
-
-        <div class="timeline">
-
-            <!-- Frontend / Projects -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-card">
-                    <div class="timeline-top">
-                        <h3>Frontend Developer (Academic & Personal Projects)</h3>
-                        <span class="timeline-meta">2024 — Present</span>
-                    </div>
-
-                    <p>
-                        Building responsive websites and web applications through academic and personal projects,
-                        focusing on clean UI design, usability, and performance.
-                    </p>
-
-                    <ul class="timeline-tags">
-                        <li>Responsive UI</li>
-                        <li>Performance</li>
-                        <li>Reusable Components</li>
-                        <li>Accessibility</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- CS Student -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-card">
-                    <div class="timeline-top">
-                        <h3>Computer Science Student</h3>
-                        <span class="timeline-meta">Ongoing</span>
-                    </div>
-
-                    <p>
-                        Strengthening core computer science fundamentals and applying them in practical projects
-                        and coursework.
-                    </p>
-
-                    <ul class="timeline-tags">
-                        <li>Data Structures & Algorithms (DSA)</li>
-                        <li>Web Development</li>
-                        <li>Problem Solving</li>
-                        <li>Databases & Networking</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-    <!-- Achievements Section -->
-<section id="achievements" class="achievements">
-    <div class="container">
-        <div class="achievements-stats">
-
-            <div class="stat">
-                <div class="stat-number" data-target="5">5</div>
-                <p>Full-Stack Web App Projects (University & Personal)</p>
-            </div>
-
-            <div class="stat">
-                <div class="stat-number" data-target="1">1</div>
-                <p>Strong Foundation in Algorithms & Problem Solving Practice</p>
-            </div>
-
-            <div class="stat">
-                <div class="stat-number" data-target="5">5</div>
-                <p>Programming & Database Experience ( Python, PHP, JavaScript, MogoDB, MySQL )</p>
-            </div>
-
-            <div class="stat">
-                <div class="stat-number" data-target="3">3</div>
-                <p>Certifications in AI, Data Analysis & Cybersecurity</p>
-            </div>
-
-            <div class="stat">
-                <div class="stat-number" data-target="10">10</div>
-                <p>Academic & Personal Projects Built and Continuously Improved</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-    <!-- What I'm Focused On Section -->
-<section id="services" class="services">
-    <div class="container">
-        <div class="section-header">
-            <h2>What I’m Focused On</h2>
-            <div class="underline"></div>
-            <p>Areas I’m currently learning and building through projects</p>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Full-Stack Development</h3>
-                <p>Building web applications using PHP, JavaScript, HTML, CSS, Python, MySQL and MogoDB while understanding how frontend and backend systems work together.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <h3>Backend & Databases</h3>
-                <p>Working with MongoDB, MySQL and backend logic to understand data storage, management, and integration in real applications.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3>Problem Solving</h3>
-                <p>Practicing data structures and algorithms to improve logical thinking and prepare for technical interviews.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <h3>Software Engineering Fundamentals</h3>
-                <p>Learning clean code practices, object-oriented programming, and system design through academic and personal projects.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Continuous Learning</h3>
-                <p>Expanding knowledge through projects and certifications in AI, data analysis, and cybersecurity.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- Writing Section -->
-<section id="writing" class="blog">
-    <div class="container">
-
-        <div class="section-header">
-            <h2>Writing</h2>
-            <div class="underline"></div>
-            <p>Short notes about what I learn and build</p>
-        </div>
-
-        <div class="blog-grid" id="writingGrid" aria-live="polite">
-            <!-- Filled by script.js -->
-        </div>
-
-    </div>
-</section>
-<!-- Projects Section -->
-<section id="projects" class="projects">
-    <div class="container">
-
-        <div class="section-header">
-            <h2>Projects</h2>
-            <div class="underline"></div>
-            <p>Selected work and applications I’ve built or contributed to</p>
-        </div>
-
-        <!-- Toolbar -->
-        <div class="projects-toolbar" role="region" aria-label="Project filters">
-
-            <div class="project-filters" id="projectFilters" role="tablist" aria-label="Filter projects">
+            <!-- Grid -->
+            <div class="projects-grid" id="projectsGrid" aria-live="polite" aria-atomic="false">
                 <!-- Filled by script.js -->
             </div>
 
-            <div class="project-search">
-                <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
-                <input
-                    id="projectSearch"
-                    type="search"
-                    placeholder="Search projects..."
-                    autocomplete="off"
-                    aria-label="Search projects"
-                >
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ SKILLS ═══ -->
+    <section id="skills" class="skills">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <div class="underline"></div>
+                <p>Technologies and tools I work with</p>
             </div>
 
-        </div>
+            <div class="skills-grid">
 
-        <!-- Grid -->
-        <div class="projects-grid" id="projectsGrid" aria-live="polite">
-            <!-- Filled by script.js -->
-        </div>
-
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills">
-    <div class="container">
-
-        <div class="section-header">
-            <h2>Technical Skills</h2>
-            <div class="underline"></div>
-            <p>Technologies and tools I work with</p>
-        </div>
-
-        <div class="skills-grid">
-
-            <!-- Frontend -->
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Frontend</h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-                        <span>HTML5</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code" aria-hidden="true"></i> Frontend</h3>
+                    <div class="skill-tags" aria-label="Frontend skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Responsive Design</span>
                     </div>
-
-                    <div class="skill-item">
-                        <span>CSS3</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>React</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Tools -->
-            <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-                        <span>Git & GitHub</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>VS Code</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="95"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Figma</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="65"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Responsive Design</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-
-        <div class="section-header">
-            <h2>Get In Touch</h2>
-            <div class="underline"></div>
-            <p>Let’s connect and build something meaningful</p>
-        </div>
-
-        <div class="contact-content">
-
-            <!-- Contact Info -->
-            <div class="contact-info">
-
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>tedrosweldegebriel465@gmail.com</p>
                 </div>
 
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p>+251949802587</p>
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server" aria-hidden="true"></i> Backend</h3>
+                    <div class="skill-tags" aria-label="Backend skills">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">REST API Design</span>
+                        <span class="skill-tag">JWT Auth</span>
+                    </div>
                 </div>
 
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <p>Aksum, Ethiopia</p>
+                <!-- Databases -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database" aria-hidden="true"></i> Databases</h3>
+                    <div class="skill-tags" aria-label="Database skills">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Mongoose</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Database Design</span>
+                    </div>
+                </div>
+
+                <!-- CS & Algorithms -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain" aria-hidden="true"></i> CS &amp; Algorithms</h3>
+                    <div class="skill-tags" aria-label="Computer science skills">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+
+                <!-- Developer Tools -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-wrench" aria-hidden="true"></i> Developer Tools</h3>
+                    <div class="skill-tags" aria-label="Developer tools">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">XAMPP</span>
+                        <span class="skill-tag">Postman</span>
+                    </div>
                 </div>
 
             </div>
 
-            <!-- Contact Form -->
-            <form class="contact-form" method="POST" data-netlify="true">
-
-                <input type="hidden" name="form-name" value="contact">
-
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                    Send Message <i class="fas fa-paper-plane"></i>
-                </button>
-
-            </form>
-
         </div>
+    </section>
 
-    </div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
+    <!-- ═══════════════════════════════════════════ CERTIFICATIONS ═══ -->
+    <section id="certifications" class="certifications">
+        <div class="container">
 
-        <div class="footer-content">
+            <div class="section-header">
+                <h2>Certifications &amp; Achievements</h2>
+                <div class="underline"></div>
+                <p>Courses and credentials completed</p>
+            </div>
 
-            <p>
-                © 2026 Tedros. All rights reserved. Built with focus and dedication to software development.
-            </p>
+            <div class="cert-grid">
 
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <div class="cert-card">
+                    <div class="cert-icon" aria-hidden="true">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Data Analysis Fundamentals</h3>
+                        <p class="cert-issuer">Udacity</p>
+                        <p class="cert-date">August 2025</p>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon" aria-hidden="true">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3>AI Fundamentals</h3>
+                        <p class="cert-issuer">Udacity</p>
+                        <p class="cert-date">June 2025</p>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon" aria-hidden="true">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Introduction to Cybersecurity</h3>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <p class="cert-date">August 2025</p>
+                    </div>
+                </div>
+
+                <div class="cert-card cert-card--academic">
+                    <div class="cert-icon" aria-hidden="true">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3>BSc Computer Science</h3>
+                        <p class="cert-issuer">Aksum University — 4th Year</p>
+                        
+                    </div>
+                </div>
+
             </div>
 
         </div>
+    </section>
 
-    </div>
-</footer>
+    <!-- ═══════════════════════════════════════════ CONTACT ═══ -->
+    <section id="contact" class="contact">
+        <div class="container">
 
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="underline"></div>
+                <p>Let's connect and build something meaningful</p>
+            </div>
 
-<!-- Project Modal -->
-<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project details">
+            <div class="contact-content">
 
-    <div class="modal-overlay" data-modal-close></div>
+                <div class="contact-info">
 
-    <div class="modal-content" role="document">
+                    <a href="mailto:tedrosweldegebriel465@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <h3>Email</h3>
+                        <p>tedrosweldegebriel465@gmail.com</p>
+                    </a>
 
-        <button class="modal-close" type="button" aria-label="Close" data-modal-close>
-            <i class="fas fa-xmark"></i>
-        </button>
+                    <a href="https://github.com/tedrosweldegebriel465-eng" target="_blank" rel="noreferrer" class="contact-card">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <h3>GitHub</h3>
+                        <p>tedrosweldegebriel465-eng</p>
+                    </a>
 
-        <div class="modal-body" id="projectModalBody">
-            <!-- Filled by script.js -->
+                    <a href="https://www.linkedin.com/in/tedros-dev369/" target="_blank" rel="noreferrer" class="contact-card">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <h3>LinkedIn</h3>
+                        <p>tedros-dev369</p>
+                    </a>
+
+                    <div class="contact-card contact-card--location">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <h3>Location</h3>
+                        <p>Aksum, Ethiopia</p>
+                    </div>
+
+                </div>
+
+                <!-- Netlify Contact Form -->
+                <form class="contact-form" method="POST" data-netlify="true" name="contact" netlify-honeypot="bot-field">
+
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden-field" aria-hidden="true">
+                        <label>Don't fill this out: <input name="bot-field"></label>
+                    </p>
+
+                    <div class="form-group">
+                        <label for="contact-name">Your Name</label>
+                        <input id="contact-name" type="text" name="name" placeholder="Abebe Kebede" required autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Your Email</label>
+                        <input id="contact-email" type="email" name="email" placeholder="abebe@example.com" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="Tell me about your project or opportunity..." rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+
+                </form>
+
+            </div>
         </div>
+    </section>
 
+    <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <p>
+                    &copy; <span id="footerYear"></span> Tedros Weldegebriel. Built with HTML, CSS &amp; JavaScript.
+                </p>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal-overlay" data-modal-close></div>
+        <div class="modal-content" role="document">
+            <button class="modal-close" type="button" aria-label="Close project details" data-modal-close>
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div class="modal-body" id="projectModalBody">
+                <!-- Filled by script.js -->
+            </div>
+        </div>
     </div>
 
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
